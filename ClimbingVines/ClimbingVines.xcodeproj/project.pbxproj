@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9DAC0FF1B300DE300E4C2FC /* anim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0961B300DE300E4C2FC /* anim.cpp */; };
+		C9DAC1031B300DE300E4C2FC /* CameraManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC09D1B300DE300E4C2FC /* CameraManager.cpp */; };
+		C9DAC1041B300DE300E4C2FC /* KeyboardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0A01B300DE300E4C2FC /* KeyboardManager.cpp */; };
+		C9DAC1061B300DE300E4C2FC /* MatrixManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0A31B300DE300E4C2FC /* MatrixManager.cpp */; };
+		C9DAC1071B300DE300E4C2FC /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0A51B300DE300E4C2FC /* Primitives.cpp */; };
+		C9DAC11C1B300DE300E4C2FC /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0EE1B300DE300E4C2FC /* ShaderManager.cpp */; };
+		C9DAC11D1B300DE300E4C2FC /* ShapeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F01B300DE300E4C2FC /* ShapeData.cpp */; };
+		C9DAC11E1B300DE300E4C2FC /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F21B300DE300E4C2FC /* TextureManager.cpp */; };
+		C9DAC11F1B300DE300E4C2FC /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F41B300DE300E4C2FC /* Timer.cpp */; };
+		C9DAC1201B300DE300E4C2FC /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F61B300DE300E4C2FC /* Tree.cpp */; };
+		C9DAC1211B300DE300E4C2FC /* TreeLeaf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F81B300DE300E4C2FC /* TreeLeaf.cpp */; };
+		C9DAC1221B300DE300E4C2FC /* PlantPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0FA1B300DE300E4C2FC /* PlantPrimitives.cpp */; };
+		C9DAC1231B300DE300E4C2FC /* TreeSegment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0FC1B300DE300E4C2FC /* TreeSegment.cpp */; };
+		C9DAC1251B300E3500E4C2FC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DAC1241B300E3500E4C2FC /* OpenGL.framework */; };
+		C9DAC1271B300E4B00E4C2FC /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DAC1261B300E4B00E4C2FC /* GLUT.framework */; };
+		C9DAC15D1B30147200E4C2FC /* AABB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC12E1B30147200E4C2FC /* AABB.cpp */; };
+		C9DAC15E1B30147200E4C2FC /* Cylinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1301B30147200E4C2FC /* Cylinder.cpp */; };
+		C9DAC15F1B30147200E4C2FC /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1321B30147200E4C2FC /* Plane.cpp */; };
+		C9DAC1601B30147200E4C2FC /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1341B30147200E4C2FC /* Ray.cpp */; };
+		C9DAC1611B30147200E4C2FC /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1361B30147200E4C2FC /* Shape.cpp */; };
+		C9DAC1621B30147200E4C2FC /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1381B30147200E4C2FC /* Sphere.cpp */; };
+		C9DAC1631B30147200E4C2FC /* Triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC13A1B30147200E4C2FC /* Triangle.cpp */; };
+		C9DAC1641B30147200E4C2FC /* ImageIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC13D1B30147200E4C2FC /* ImageIO.cpp */; };
+		C9DAC1651B30147200E4C2FC /* ObjParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC13F1B30147200E4C2FC /* ObjParser.cpp */; };
+		C9DAC1661B30147200E4C2FC /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1411B30147200E4C2FC /* Parser.cpp */; };
+		C9DAC1671B30147200E4C2FC /* matm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1441B30147200E4C2FC /* matm.cpp */; };
+		C9DAC1681B30147200E4C2FC /* quat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1461B30147200E4C2FC /* quat.cpp */; };
+		C9DAC1691B30147200E4C2FC /* PCylinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC14B1B30147200E4C2FC /* PCylinder.cpp */; };
+		C9DAC16A1B30147200E4C2FC /* PPlane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC14D1B30147200E4C2FC /* PPlane.cpp */; };
+		C9DAC16B1B30147200E4C2FC /* PSphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1501B30147200E4C2FC /* PSphere.cpp */; };
+		C9DAC16C1B30147200E4C2FC /* PTriangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1521B30147200E4C2FC /* PTriangle.cpp */; };
+		C9DAC16D1B30147200E4C2FC /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1541B30147200E4C2FC /* World.cpp */; };
+		C9DAC16E1B30147200E4C2FC /* IteratorDDA.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1571B30147200E4C2FC /* IteratorDDA.cpp */; };
+		C9DAC16F1B30147200E4C2FC /* Voxel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1591B30147200E4C2FC /* Voxel.cpp */; };
+		C9DAC1701B30147200E4C2FC /* VoxelMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC15B1B30147200E4C2FC /* VoxelMap.cpp */; };
+		C9DAC1761B30160700E4C2FC /* Image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1741B30160700E4C2FC /* Image.cpp */; };
+		C9DAC1781B3016D700E4C2FC /* vecm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1771B3016D700E4C2FC /* vecm.cpp */; };
+		C9DAC1811B301B6000E4C2FC /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC17D1B301B6000E4C2FC /* Camera.cpp */; };
+		C9DAC1821B301B6000E4C2FC /* Phong.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC17F1B301B6000E4C2FC /* Phong.cpp */; };
+		C9DAC1861B301B8200E4C2FC /* Light.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC1841B301B8200E4C2FC /* Light.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C9DAC0891B300AD200E4C2FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C9DAC08B1B300AD200E4C2FC /* ClimbingVines */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClimbingVines; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9DAC0961B300DE300E4C2FC /* anim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = anim.cpp; sourceTree = "<group>"; };
+		C9DAC09D1B300DE300E4C2FC /* CameraManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraManager.cpp; sourceTree = "<group>"; };
+		C9DAC09E1B300DE300E4C2FC /* CameraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraManager.h; sourceTree = "<group>"; };
+		C9DAC09F1B300DE300E4C2FC /* fshader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fshader.glsl; sourceTree = "<group>"; };
+		C9DAC0A01B300DE300E4C2FC /* KeyboardManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardManager.cpp; sourceTree = "<group>"; };
+		C9DAC0A11B300DE300E4C2FC /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		C9DAC0A31B300DE300E4C2FC /* MatrixManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixManager.cpp; sourceTree = "<group>"; };
+		C9DAC0A41B300DE300E4C2FC /* MatrixManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixManager.h; sourceTree = "<group>"; };
+		C9DAC0A51B300DE300E4C2FC /* Primitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Primitives.cpp; sourceTree = "<group>"; };
+		C9DAC0A61B300DE300E4C2FC /* Primitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Primitives.h; sourceTree = "<group>"; };
+		C9DAC0EE1B300DE300E4C2FC /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderManager.cpp; sourceTree = "<group>"; };
+		C9DAC0EF1B300DE300E4C2FC /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
+		C9DAC0F01B300DE300E4C2FC /* ShapeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShapeData.cpp; sourceTree = "<group>"; };
+		C9DAC0F11B300DE300E4C2FC /* ShapeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeData.h; sourceTree = "<group>"; };
+		C9DAC0F21B300DE300E4C2FC /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
+		C9DAC0F31B300DE300E4C2FC /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
+		C9DAC0F41B300DE300E4C2FC /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		C9DAC0F51B300DE300E4C2FC /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		C9DAC0F61B300DE300E4C2FC /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
+		C9DAC0F71B300DE300E4C2FC /* Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		C9DAC0F81B300DE300E4C2FC /* TreeLeaf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeLeaf.cpp; sourceTree = "<group>"; };
+		C9DAC0F91B300DE300E4C2FC /* TreeLeaf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeLeaf.h; sourceTree = "<group>"; };
+		C9DAC0FA1B300DE300E4C2FC /* PlantPrimitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlantPrimitives.cpp; sourceTree = "<group>"; };
+		C9DAC0FB1B300DE300E4C2FC /* PlantPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantPrimitives.h; sourceTree = "<group>"; };
+		C9DAC0FC1B300DE300E4C2FC /* TreeSegment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeSegment.cpp; sourceTree = "<group>"; };
+		C9DAC0FD1B300DE300E4C2FC /* TreeSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeSegment.h; sourceTree = "<group>"; };
+		C9DAC0FE1B300DE300E4C2FC /* vshader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vshader.glsl; sourceTree = "<group>"; };
+		C9DAC1241B300E3500E4C2FC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		C9DAC1261B300E4B00E4C2FC /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		C9DAC12E1B30147200E4C2FC /* AABB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AABB.cpp; sourceTree = "<group>"; };
+		C9DAC12F1B30147200E4C2FC /* AABB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AABB.h; sourceTree = "<group>"; };
+		C9DAC1301B30147200E4C2FC /* Cylinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cylinder.cpp; sourceTree = "<group>"; };
+		C9DAC1311B30147200E4C2FC /* Cylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cylinder.h; sourceTree = "<group>"; };
+		C9DAC1321B30147200E4C2FC /* Plane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plane.cpp; sourceTree = "<group>"; };
+		C9DAC1331B30147200E4C2FC /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
+		C9DAC1341B30147200E4C2FC /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ray.cpp; sourceTree = "<group>"; };
+		C9DAC1351B30147200E4C2FC /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ray.h; sourceTree = "<group>"; };
+		C9DAC1361B30147200E4C2FC /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shape.cpp; sourceTree = "<group>"; };
+		C9DAC1371B30147200E4C2FC /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		C9DAC1381B30147200E4C2FC /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
+		C9DAC1391B30147200E4C2FC /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		C9DAC13A1B30147200E4C2FC /* Triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Triangle.cpp; sourceTree = "<group>"; };
+		C9DAC13B1B30147200E4C2FC /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
+		C9DAC13D1B30147200E4C2FC /* ImageIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImageIO.cpp; sourceTree = "<group>"; };
+		C9DAC13E1B30147200E4C2FC /* ImageIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageIO.h; sourceTree = "<group>"; };
+		C9DAC13F1B30147200E4C2FC /* ObjParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjParser.cpp; sourceTree = "<group>"; };
+		C9DAC1401B30147200E4C2FC /* ObjParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjParser.h; sourceTree = "<group>"; };
+		C9DAC1411B30147200E4C2FC /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
+		C9DAC1421B30147200E4C2FC /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		C9DAC1441B30147200E4C2FC /* matm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matm.cpp; sourceTree = "<group>"; };
+		C9DAC1451B30147200E4C2FC /* matm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matm.h; sourceTree = "<group>"; };
+		C9DAC1461B30147200E4C2FC /* quat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = quat.cpp; sourceTree = "<group>"; };
+		C9DAC1471B30147200E4C2FC /* quat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quat.h; sourceTree = "<group>"; };
+		C9DAC1481B30147200E4C2FC /* vecm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vecm.h; sourceTree = "<group>"; };
+		C9DAC14A1B30147200E4C2FC /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
+		C9DAC14B1B30147200E4C2FC /* PCylinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PCylinder.cpp; sourceTree = "<group>"; };
+		C9DAC14C1B30147200E4C2FC /* PCylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCylinder.h; sourceTree = "<group>"; };
+		C9DAC14D1B30147200E4C2FC /* PPlane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PPlane.cpp; sourceTree = "<group>"; };
+		C9DAC14E1B30147200E4C2FC /* PPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPlane.h; sourceTree = "<group>"; };
+		C9DAC14F1B30147200E4C2FC /* Primitive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Primitive.h; sourceTree = "<group>"; };
+		C9DAC1501B30147200E4C2FC /* PSphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PSphere.cpp; sourceTree = "<group>"; };
+		C9DAC1511B30147200E4C2FC /* PSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSphere.h; sourceTree = "<group>"; };
+		C9DAC1521B30147200E4C2FC /* PTriangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PTriangle.cpp; sourceTree = "<group>"; };
+		C9DAC1531B30147200E4C2FC /* PTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTriangle.h; sourceTree = "<group>"; };
+		C9DAC1541B30147200E4C2FC /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
+		C9DAC1551B30147200E4C2FC /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		C9DAC1571B30147200E4C2FC /* IteratorDDA.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IteratorDDA.cpp; sourceTree = "<group>"; };
+		C9DAC1581B30147200E4C2FC /* IteratorDDA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IteratorDDA.h; sourceTree = "<group>"; };
+		C9DAC1591B30147200E4C2FC /* Voxel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Voxel.cpp; sourceTree = "<group>"; };
+		C9DAC15A1B30147200E4C2FC /* Voxel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voxel.h; sourceTree = "<group>"; };
+		C9DAC15B1B30147200E4C2FC /* VoxelMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VoxelMap.cpp; sourceTree = "<group>"; };
+		C9DAC15C1B30147200E4C2FC /* VoxelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoxelMap.h; sourceTree = "<group>"; };
+		C9DAC1741B30160700E4C2FC /* Image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Image.cpp; sourceTree = "<group>"; };
+		C9DAC1751B30160700E4C2FC /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		C9DAC1771B3016D700E4C2FC /* vecm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vecm.cpp; sourceTree = "<group>"; };
+		C9DAC17B1B301AA300E4C2FC /* Intersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intersection.h; sourceTree = "<group>"; };
+		C9DAC17D1B301B6000E4C2FC /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		C9DAC17E1B301B6000E4C2FC /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		C9DAC17F1B301B6000E4C2FC /* Phong.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Phong.cpp; sourceTree = "<group>"; };
+		C9DAC1801B301B6000E4C2FC /* Phong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Phong.h; sourceTree = "<group>"; };
+		C9DAC1841B301B8200E4C2FC /* Light.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Light.cpp; sourceTree = "<group>"; };
+		C9DAC1851B301B8200E4C2FC /* Light.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Light.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9DAC0881B300AD200E4C2FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9DAC1271B300E4B00E4C2FC /* GLUT.framework in Frameworks */,
+				C9DAC1251B300E3500E4C2FC /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9DAC0821B300AD200E4C2FC = {
+			isa = PBXGroup;
+			children = (
+				C9DAC1261B300E4B00E4C2FC /* GLUT.framework */,
+				C9DAC1241B300E3500E4C2FC /* OpenGL.framework */,
+				C9DAC08D1B300AD200E4C2FC /* ClimbingVines */,
+				C9DAC08C1B300AD200E4C2FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9DAC08C1B300AD200E4C2FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC08B1B300AD200E4C2FC /* ClimbingVines */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9DAC08D1B300AD200E4C2FC /* ClimbingVines */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC1711B30147600E4C2FC /* RT */,
+				C9DAC0951B300DA500E4C2FC /* oGL */,
+			);
+			path = ClimbingVines;
+			sourceTree = "<group>";
+		};
+		C9DAC0951B300DA500E4C2FC /* oGL */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC12C1B300FE400E4C2FC /* Timer */,
+				C9DAC12B1B300FD100E4C2FC /* Plant */,
+				C9DAC12A1B300F5A00E4C2FC /* Geometry */,
+				C9DAC1291B300EBA00E4C2FC /* Shaders */,
+				C9DAC1281B300E5C00E4C2FC /* Managers */,
+				C9DAC0961B300DE300E4C2FC /* anim.cpp */,
+			);
+			name = oGL;
+			sourceTree = "<group>";
+		};
+		C9DAC1281B300E5C00E4C2FC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC0F21B300DE300E4C2FC /* TextureManager.cpp */,
+				C9DAC0F31B300DE300E4C2FC /* TextureManager.h */,
+				C9DAC0EE1B300DE300E4C2FC /* ShaderManager.cpp */,
+				C9DAC0EF1B300DE300E4C2FC /* ShaderManager.h */,
+				C9DAC0A31B300DE300E4C2FC /* MatrixManager.cpp */,
+				C9DAC0A41B300DE300E4C2FC /* MatrixManager.h */,
+				C9DAC09D1B300DE300E4C2FC /* CameraManager.cpp */,
+				C9DAC09E1B300DE300E4C2FC /* CameraManager.h */,
+				C9DAC0A01B300DE300E4C2FC /* KeyboardManager.cpp */,
+				C9DAC0A11B300DE300E4C2FC /* KeyboardManager.h */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		C9DAC1291B300EBA00E4C2FC /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC09F1B300DE300E4C2FC /* fshader.glsl */,
+				C9DAC0FE1B300DE300E4C2FC /* vshader.glsl */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		C9DAC12A1B300F5A00E4C2FC /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC0F01B300DE300E4C2FC /* ShapeData.cpp */,
+				C9DAC0F11B300DE300E4C2FC /* ShapeData.h */,
+				C9DAC0A51B300DE300E4C2FC /* Primitives.cpp */,
+				C9DAC0A61B300DE300E4C2FC /* Primitives.h */,
+				C9DAC0FA1B300DE300E4C2FC /* PlantPrimitives.cpp */,
+				C9DAC0FB1B300DE300E4C2FC /* PlantPrimitives.h */,
+			);
+			name = Geometry;
+			sourceTree = "<group>";
+		};
+		C9DAC12B1B300FD100E4C2FC /* Plant */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC0F61B300DE300E4C2FC /* Tree.cpp */,
+				C9DAC0F71B300DE300E4C2FC /* Tree.h */,
+				C9DAC0F81B300DE300E4C2FC /* TreeLeaf.cpp */,
+				C9DAC0F91B300DE300E4C2FC /* TreeLeaf.h */,
+				C9DAC0FC1B300DE300E4C2FC /* TreeSegment.cpp */,
+				C9DAC0FD1B300DE300E4C2FC /* TreeSegment.h */,
+			);
+			name = Plant;
+			sourceTree = "<group>";
+		};
+		C9DAC12C1B300FE400E4C2FC /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC0F41B300DE300E4C2FC /* Timer.cpp */,
+				C9DAC0F51B300DE300E4C2FC /* Timer.h */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
+		C9DAC12D1B30147200E4C2FC /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC12E1B30147200E4C2FC /* AABB.cpp */,
+				C9DAC12F1B30147200E4C2FC /* AABB.h */,
+				C9DAC1301B30147200E4C2FC /* Cylinder.cpp */,
+				C9DAC1311B30147200E4C2FC /* Cylinder.h */,
+				C9DAC1321B30147200E4C2FC /* Plane.cpp */,
+				C9DAC1331B30147200E4C2FC /* Plane.h */,
+				C9DAC1341B30147200E4C2FC /* Ray.cpp */,
+				C9DAC1351B30147200E4C2FC /* Ray.h */,
+				C9DAC1361B30147200E4C2FC /* Shape.cpp */,
+				C9DAC1371B30147200E4C2FC /* Shape.h */,
+				C9DAC1381B30147200E4C2FC /* Sphere.cpp */,
+				C9DAC1391B30147200E4C2FC /* Sphere.h */,
+				C9DAC13A1B30147200E4C2FC /* Triangle.cpp */,
+				C9DAC13B1B30147200E4C2FC /* Triangle.h */,
+			);
+			name = Geometry;
+			path = ../../../RayTracer/RayTracer/Geometry;
+			sourceTree = "<group>";
+		};
+		C9DAC13C1B30147200E4C2FC /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC13D1B30147200E4C2FC /* ImageIO.cpp */,
+				C9DAC13E1B30147200E4C2FC /* ImageIO.h */,
+				C9DAC13F1B30147200E4C2FC /* ObjParser.cpp */,
+				C9DAC1401B30147200E4C2FC /* ObjParser.h */,
+				C9DAC1411B30147200E4C2FC /* Parser.cpp */,
+				C9DAC1421B30147200E4C2FC /* Parser.h */,
+			);
+			name = IO;
+			path = ../../../RayTracer/RayTracer/IO;
+			sourceTree = "<group>";
+		};
+		C9DAC1431B30147200E4C2FC /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC1441B30147200E4C2FC /* matm.cpp */,
+				C9DAC1451B30147200E4C2FC /* matm.h */,
+				C9DAC1461B30147200E4C2FC /* quat.cpp */,
+				C9DAC1471B30147200E4C2FC /* quat.h */,
+				C9DAC1481B30147200E4C2FC /* vecm.h */,
+				C9DAC1771B3016D700E4C2FC /* vecm.cpp */,
+			);
+			name = Math;
+			path = ../../../RayTracer/RayTracer/Math;
+			sourceTree = "<group>";
+		};
+		C9DAC1491B30147200E4C2FC /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC17B1B301AA300E4C2FC /* Intersection.h */,
+				C9DAC14A1B30147200E4C2FC /* Material.h */,
+				C9DAC14B1B30147200E4C2FC /* PCylinder.cpp */,
+				C9DAC14C1B30147200E4C2FC /* PCylinder.h */,
+				C9DAC14D1B30147200E4C2FC /* PPlane.cpp */,
+				C9DAC14E1B30147200E4C2FC /* PPlane.h */,
+				C9DAC14F1B30147200E4C2FC /* Primitive.h */,
+				C9DAC1501B30147200E4C2FC /* PSphere.cpp */,
+				C9DAC1511B30147200E4C2FC /* PSphere.h */,
+				C9DAC1521B30147200E4C2FC /* PTriangle.cpp */,
+				C9DAC1531B30147200E4C2FC /* PTriangle.h */,
+				C9DAC1541B30147200E4C2FC /* World.cpp */,
+				C9DAC1551B30147200E4C2FC /* World.h */,
+			);
+			name = Primitives;
+			path = ../../../RayTracer/RayTracer/Primitives;
+			sourceTree = "<group>";
+		};
+		C9DAC1561B30147200E4C2FC /* Voxel */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC1571B30147200E4C2FC /* IteratorDDA.cpp */,
+				C9DAC1581B30147200E4C2FC /* IteratorDDA.h */,
+				C9DAC1591B30147200E4C2FC /* Voxel.cpp */,
+				C9DAC15A1B30147200E4C2FC /* Voxel.h */,
+				C9DAC15B1B30147200E4C2FC /* VoxelMap.cpp */,
+				C9DAC15C1B30147200E4C2FC /* VoxelMap.h */,
+			);
+			name = Voxel;
+			path = ../../../RayTracer/RayTracer/Voxel;
+			sourceTree = "<group>";
+		};
+		C9DAC1711B30147600E4C2FC /* RT */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC1831B301B8200E4C2FC /* Lighting */,
+				C9DAC17C1B301B6000E4C2FC /* Camera */,
+				C9DAC1731B30160700E4C2FC /* Image */,
+				C9DAC12D1B30147200E4C2FC /* Geometry */,
+				C9DAC13C1B30147200E4C2FC /* IO */,
+				C9DAC1431B30147200E4C2FC /* Math */,
+				C9DAC1491B30147200E4C2FC /* Primitives */,
+				C9DAC1561B30147200E4C2FC /* Voxel */,
+			);
+			name = RT;
+			sourceTree = "<group>";
+		};
+		C9DAC1731B30160700E4C2FC /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC1741B30160700E4C2FC /* Image.cpp */,
+				C9DAC1751B30160700E4C2FC /* Image.h */,
+			);
+			name = Image;
+			path = ../../../RayTracer/RayTracer/Image;
+			sourceTree = "<group>";
+		};
+		C9DAC17C1B301B6000E4C2FC /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC17D1B301B6000E4C2FC /* Camera.cpp */,
+				C9DAC17E1B301B6000E4C2FC /* Camera.h */,
+				C9DAC17F1B301B6000E4C2FC /* Phong.cpp */,
+				C9DAC1801B301B6000E4C2FC /* Phong.h */,
+			);
+			name = Camera;
+			path = ../../../RayTracer/RayTracer/Camera;
+			sourceTree = "<group>";
+		};
+		C9DAC1831B301B8200E4C2FC /* Lighting */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC1841B301B8200E4C2FC /* Light.cpp */,
+				C9DAC1851B301B8200E4C2FC /* Light.h */,
+			);
+			name = Lighting;
+			path = ../../../RayTracer/RayTracer/Lighting;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9DAC08A1B300AD200E4C2FC /* ClimbingVines */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9DAC0921B300AD200E4C2FC /* Build configuration list for PBXNativeTarget "ClimbingVines" */;
+			buildPhases = (
+				C9DAC0871B300AD200E4C2FC /* Sources */,
+				C9DAC0881B300AD200E4C2FC /* Frameworks */,
+				C9DAC0891B300AD200E4C2FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClimbingVines;
+			productName = ClimbingVines;
+			productReference = C9DAC08B1B300AD200E4C2FC /* ClimbingVines */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9DAC0831B300AD200E4C2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Alan Litteneker";
+				TargetAttributes = {
+					C9DAC08A1B300AD200E4C2FC = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = C9DAC0861B300AD200E4C2FC /* Build configuration list for PBXProject "ClimbingVines" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C9DAC0821B300AD200E4C2FC;
+			productRefGroup = C9DAC08C1B300AD200E4C2FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9DAC08A1B300AD200E4C2FC /* ClimbingVines */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9DAC0871B300AD200E4C2FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9DAC11C1B300DE300E4C2FC /* ShaderManager.cpp in Sources */,
+				C9DAC1071B300DE300E4C2FC /* Primitives.cpp in Sources */,
+				C9DAC16A1B30147200E4C2FC /* PPlane.cpp in Sources */,
+				C9DAC15E1B30147200E4C2FC /* Cylinder.cpp in Sources */,
+				C9DAC1811B301B6000E4C2FC /* Camera.cpp in Sources */,
+				C9DAC1631B30147200E4C2FC /* Triangle.cpp in Sources */,
+				C9DAC1041B300DE300E4C2FC /* KeyboardManager.cpp in Sources */,
+				C9DAC1201B300DE300E4C2FC /* Tree.cpp in Sources */,
+				C9DAC1061B300DE300E4C2FC /* MatrixManager.cpp in Sources */,
+				C9DAC16F1B30147200E4C2FC /* Voxel.cpp in Sources */,
+				C9DAC1031B300DE300E4C2FC /* CameraManager.cpp in Sources */,
+				C9DAC1671B30147200E4C2FC /* matm.cpp in Sources */,
+				C9DAC1861B301B8200E4C2FC /* Light.cpp in Sources */,
+				C9DAC11E1B300DE300E4C2FC /* TextureManager.cpp in Sources */,
+				C9DAC1691B30147200E4C2FC /* PCylinder.cpp in Sources */,
+				C9DAC1781B3016D700E4C2FC /* vecm.cpp in Sources */,
+				C9DAC1761B30160700E4C2FC /* Image.cpp in Sources */,
+				C9DAC11D1B300DE300E4C2FC /* ShapeData.cpp in Sources */,
+				C9DAC1221B300DE300E4C2FC /* PlantPrimitives.cpp in Sources */,
+				C9DAC15F1B30147200E4C2FC /* Plane.cpp in Sources */,
+				C9DAC16B1B30147200E4C2FC /* PSphere.cpp in Sources */,
+				C9DAC1681B30147200E4C2FC /* quat.cpp in Sources */,
+				C9DAC1651B30147200E4C2FC /* ObjParser.cpp in Sources */,
+				C9DAC15D1B30147200E4C2FC /* AABB.cpp in Sources */,
+				C9DAC1661B30147200E4C2FC /* Parser.cpp in Sources */,
+				C9DAC16E1B30147200E4C2FC /* IteratorDDA.cpp in Sources */,
+				C9DAC11F1B300DE300E4C2FC /* Timer.cpp in Sources */,
+				C9DAC0FF1B300DE300E4C2FC /* anim.cpp in Sources */,
+				C9DAC1621B30147200E4C2FC /* Sphere.cpp in Sources */,
+				C9DAC1701B30147200E4C2FC /* VoxelMap.cpp in Sources */,
+				C9DAC1641B30147200E4C2FC /* ImageIO.cpp in Sources */,
+				C9DAC16C1B30147200E4C2FC /* PTriangle.cpp in Sources */,
+				C9DAC1231B300DE300E4C2FC /* TreeSegment.cpp in Sources */,
+				C9DAC16D1B30147200E4C2FC /* World.cpp in Sources */,
+				C9DAC1211B300DE300E4C2FC /* TreeLeaf.cpp in Sources */,
+				C9DAC1601B30147200E4C2FC /* Ray.cpp in Sources */,
+				C9DAC1821B301B6000E4C2FC /* Phong.cpp in Sources */,
+				C9DAC1611B30147200E4C2FC /* Shape.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C9DAC0901B300AD200E4C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C9DAC0911B300AD200E4C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C9DAC0931B300AD200E4C2FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C9DAC0941B300AD200E4C2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9DAC0861B300AD200E4C2FC /* Build configuration list for PBXProject "ClimbingVines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9DAC0901B300AD200E4C2FC /* Debug */,
+				C9DAC0911B300AD200E4C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9DAC0921B300AD200E4C2FC /* Build configuration list for PBXNativeTarget "ClimbingVines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9DAC0931B300AD200E4C2FC /* Debug */,
+				C9DAC0941B300AD200E4C2FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9DAC0831B300AD200E4C2FC /* Project object */;
+}

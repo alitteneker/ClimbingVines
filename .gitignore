@@ -1,0 +1,6 @@
+.DS_Store
+**/.DS_Store
+ClimbingVines/build
+ClimbingVines/ClimbingVines/Debug/**
+ClimbingVines/DerivedData/**
+
