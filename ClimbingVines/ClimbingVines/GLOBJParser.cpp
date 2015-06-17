@@ -67,10 +67,10 @@ void GL_parse_mtl_file(string filename, map<string, Material*>& existing) {
         else if( vs[0] == "map_Tr" || vs[0] == "map_d" ) {
             curr->map_Tr = loadTexture(vs[1]);
         }
-        else if( vs[0] == "map_refl" || vs[0] == "refl" ) {
+        else if( vs[0] == "map_refl" || vs[0] == "map_Refl" || vs[0] == "refl" ) {
             curr->map_refl = loadTexture(vs[1]);
         }
-        else if( vs[0] == "map_bump" || vs[0] == "bump" ) {
+        else if( vs[0] == "map_bump" || vs[0] == "map_Bump" || vs[0] == "bump" ) {
             curr->map_bump = loadTexture(vs[1]);
         }
         else if( vs[0] == "illum" ) {

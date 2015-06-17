@@ -113,7 +113,7 @@ void myinit(void) {
 //    tree = new Tree(program);
     
     // load the house
-    vector<Primitive*> raw = GL_parse_obj_file("house_obj.obj");
+    vector<Primitive*> raw = GL_parse_obj_file("WoodenCabinObj.obj");//"house_obj.obj");
     printf("Loaded %lu primitives.\n", raw.size());
     building = new PrimitiveShape(raw[0]->material);
     for( int i = 0; i < raw.size(); ++i )
@@ -161,7 +161,7 @@ void display(void) {
     
     // draw the building
     mstack.push(mModel);
-    mModel *= Translate(0,1,0) * Scale(0.01f);
+    mModel *= Scale(0.2f);
     building->draw();
     mModel = mstack.pop();
     
