@@ -3,7 +3,7 @@
 #include "Tree.h"
 #include "TreeSegment.h"
 #include "PlantPrimitives.h"
-#include "TextureManager.h"
+#include "TextureLoader.h"
 #include "ShaderManager.h"
 #include "MatrixManager.h"
 #include "Primitives.h"
@@ -20,16 +20,16 @@ Tree::Tree(GLuint program) {
     potShape = genPot(program);
     
     // load all textures
-    bark_texture  = loadTexture( "treebark.tga"          );
-    bark_gloss    = loadTexture( "treebark_grey.tga"     );
-    bark_normal   = loadTexture( "treebark_normal.tga"   );
-    leaf_texture  = loadTexture( "leaf_texture.tga"      );
-    leaf_gloss    = loadTexture( "leaf_texture_grey.tga" );
-    leaf_normal   = loadTexture( "leaf_normal.tga"       );
-    dirt_texture  = loadTexture( "dirt_texture.tga"      );
-    dirt_normal   = loadTexture( "dirt_normal.tga"       );
-    dirt_gloss    = loadTexture( "dirt_gloss.tga"        );
-    clay_texture  = loadTexture( "clay_texture.tga"      );
+//    bark_texture  = loadTexture( "treebark.tga"          );
+//    bark_gloss    = loadTexture( "treebark_grey.tga"     );
+//    bark_normal   = loadTexture( "treebark_normal.tga"   );
+//    leaf_texture  = loadTexture( "leaf_texture.tga"      );
+//    leaf_gloss    = loadTexture( "leaf_texture_grey.tga" );
+//    leaf_normal   = loadTexture( "leaf_normal.tga"       );
+//    dirt_texture  = loadTexture( "dirt_texture.tga"      );
+//    dirt_normal   = loadTexture( "dirt_normal.tga"       );
+//    dirt_gloss    = loadTexture( "dirt_gloss.tga"        );
+//    clay_texture  = loadTexture( "clay_texture.tga"      );
     
     // write the genes for this tree
     genes = new TreeConfig[ max_levels + 1 ];
@@ -123,7 +123,7 @@ void Tree::draw() {
     set_colour(1,1,1);
     setTextureAlpha(1.0);
     setBumpScale(20.0);
-    set_specular(0.1);
+    set_specular(vec4(0.1f));
     mstack.push(mModel);
     mModel *= Scale(2.5, 0.25, 2.5);
     drawCube();
@@ -134,7 +134,7 @@ void Tree::draw() {
     enableGloss(false);
     bindTexture(clay_texture, TEX_UNIT);
     setTextureAlpha(1.0);
-    set_specular(0.05);
+    set_specular(vec4(0.05));
     mstack.push(mModel);
     mModel *= Translate(0,-1.2,0) * Scale(3, 3, 3);
     potShape->draw();

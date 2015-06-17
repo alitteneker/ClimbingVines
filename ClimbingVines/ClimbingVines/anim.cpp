@@ -26,13 +26,16 @@
 
 #include "Timer.h"
 #include "matm.h"
+#include "Primitive.h"
 #include "Primitives.h"
 #include "PlantPrimitives.h"
 #include "ShapeData.h"
+#include "PrimitiveShape.h"
 #include "Tree.h"
+#include "GLOBJParser.h"
 
 #include "MatrixManager.h"
-#include "TextureManager.h"
+#include "TextureLoader.h"
 #include "ShaderManager.h"
 #include "CameraManager.h"
 #include "KeyboardManager.h"
@@ -70,9 +73,12 @@ void instructions();
 // The Tree
 Tree* tree;
 
+// store data for the environment
+PrimitiveShape* building;
+
 // Sky box (sphere) texture
-GLuint sky_texture;
-GLuint ground_texture, ground_gloss, ground_normal;
+GLImage* sky_texture;
+GLImage *ground_texture, *ground_gloss, *ground_normal;
 ShapeData* ground_box;
 
 /*********************************************************
@@ -104,7 +110,15 @@ void myinit(void) {
         glEnable(GL_MULTISAMPLE_ARB);
     
     // Create our tree!
-    tree = new Tree(program);
+//    tree = new Tree(program);
+    
+    // load the house
+    vector<Primitive*> raw = GL_parse_obj_file("house_obj.obj");
+    printf("Loaded %lu primitives.\n", raw.size());
+    building = new PrimitiveShape(raw[0]->material);
+    for( int i = 0; i < raw.size(); ++i )
+        building->addPrimitive(raw[i]);
+    building->buildShape(program);
 }
 
 
@@ -130,50 +144,9 @@ void display(void) {
     mModel.setIdentity(); mView.setIdentity();
     camera.setVars();
     
-    // set the camera on the tree (this is a mess, but it works)
+    // update the time counters
     ++framecount;
     timecount += TM.GetElapsedTime();
-    if( Animate ) {
-        TIME += TM.GetElapsedTime();
-        
-        const float avg_rate1 = (1.0f/1.0f)*(timecount/framecount);
-        const float dist = tree->getMaxDistance();
-        new_dist = ((1-avg_rate1)*new_dist) + (avg_rate1*dist);
-        if( tree->num_segments == prev_segments )
-            time_since_change += timecount/framecount;
-        else
-            time_since_change = 0;
-        prev_segments = tree->num_segments;
-        if( tree->num_segments > 600 )
-            go_out = true;
-        
-        const float avg_rate2 = (1.0f/10.0f)*(timecount/framecount);
-        if( go_out ) {
-            ref_height = ((1-avg_rate2)*ref_height) + (avg_rate2*(new_dist-12));
-            eye_height = ((1-avg_rate2)*eye_height) + (-avg_rate2);
-            eye_dist = ((1-avg_rate2)*eye_dist) + (avg_rate2*1.5*new_dist);
-            circle_time_scale *= (1-avg_rate2);
-            if( circle_time_scale < 0.002 ) {
-                circle_time_scale = 0;
-                Animate = false;
-            }
-        }
-        else {
-            ref_height = new_dist/2;
-            eye_dist = ( 4 > 0.5*new_dist ) ? 4 : ((1-avg_rate2)*eye_dist)+(0.5f*new_dist*avg_rate2);
-            eye_height = ( (1+new_dist/4) > (0.5*new_dist) )
-                ? (1+new_dist/4)
-                : ((1-avg_rate2) * eye_height) + ((new_dist/2) * avg_rate2);
-        }
-        camera.setRef( vec4( 0, ref_height + tree->pot_height, 0, 1 ) );
-        rotation += circle_time_scale * TM.GetElapsedTime();
-        vec4 eye_pos = vec4(
-               eye_dist * cosf( rotation ),
-               eye_height + tree->pot_height,
-               eye_dist * sinf( rotation ),
-               1 );
-        camera.setEye(eye_pos);
-    }
     TM.Reset();
     
     // Set up all the right flags for general rendering
@@ -181,9 +154,15 @@ void display(void) {
     enableEyeRelative(false);
     enableLighting(true);
 
-    // Draw the tree!
+//    // Draw the tree!
+//    mstack.push(mModel);
+//    tree->draw();
+//    mModel = mstack.pop();
+    
+    // draw the building
     mstack.push(mModel);
-    tree->draw();
+    mModel *= Translate(0,1,0) * Scale(0.01f);
+    building->draw();
     mModel = mstack.pop();
     
     // draw a ground plane
@@ -330,12 +309,12 @@ void idleCB(void) {
     if( Animate ) {
         // Do some basic FPS calculations
         if( timecount > 1 ) {
-            printf("Time %3.0f FPS: %f (Segments: %d, Leaves: %d)\n", TIME, framecount/timecount, tree->num_segments, tree->num_leafs);
+            printf("Time %3.0f FPS: %f \n", TIME, framecount/timecount);
             framecount = 0;
             timecount = 0;
         }
 
-        tree->passTime(TIME);
+//        tree->passTime(TIME);
 
         glutPostRedisplay();
     }
@@ -353,7 +332,7 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv);
     // Adding GLUT_3_2_CORE_PROFILE to the following will use newer openGL versions, but also completely break shaders
     glutInitDisplayMode( GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH | GLUT_MULTISAMPLE );
-    glutInitWindowPosition (0, 0);
+    glutInitWindowPosition(0, 0);
     glutInitWindowSize(Width, Height);
     glutCreateWindow(argv[0]);
     printf("GL version %s\n", glGetString(GL_VERSION));
@@ -366,10 +345,10 @@ int main(int argc, char** argv) {
     keyManager.addKeyPressedListener(keyPressed);
 
     glutIdleFunc(idleCB) ;
-    glutReshapeFunc (myReshape);
+    glutReshapeFunc(myReshape);
     glutMouseFunc(myMouseCB) ;
     glutMotionFunc(myMotionCB) ;
-    instructions();
+//    instructions();
 
     glutDisplayFunc(display);
     

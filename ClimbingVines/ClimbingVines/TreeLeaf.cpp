@@ -31,7 +31,7 @@ void TreeLeaf::draw() {
     
     setTextureAlpha(1.0);
     set_colour(1.0, 1.0, 1.0);
-    set_specular(0.3f);
+    set_specular(vec4(0.3f));
     setBumpScale(0.5f);
     
     mstack.push(mModel);

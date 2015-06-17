@@ -8,7 +8,7 @@ CameraManager::CameraManager() {
     reset();
 }
 void CameraManager::reset() {
-    eye = vec4{ 4.0, 3.7, 0.0, 1.0 };
+    eye = vec4{ 20.0, 3.7, 0.0, 1.0 };
     ref = vec4{ 0.0, 2.7, 0.0,   1.0 };
     up  = vec4{ 0.0, 1.0, 0.0,   0.0 };
 }

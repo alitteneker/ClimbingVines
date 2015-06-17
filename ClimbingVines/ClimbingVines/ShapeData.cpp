@@ -6,7 +6,7 @@
 
 #define BUFFER_OFFSET( offset )   ((GLvoid*) (offset))
 
-ShapeData::ShapeData(int size) {
+ShapeData::ShapeData(unsigned long size) {
     numVertices = size;
     points   = (vec4*)malloc(sizeof(vec4) * size);
     normals  = (vec3*)malloc(sizeof(vec3) * size);

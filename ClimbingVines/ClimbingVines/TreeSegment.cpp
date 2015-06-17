@@ -7,7 +7,7 @@
 #include "ShapeData.h"
 #include "MatrixManager.h"
 #include "ShaderManager.h"
-#include "TextureManager.h"
+#include "TextureLoader.h"
 #include "matm.h"
 
 float lerp(float scale, float a, float b) {
@@ -137,7 +137,7 @@ void TreeSegment::setMaterial() {
     set_colour(lerp(scale, tree->colour_new, tree->colour_old));
     setTextureAlpha(lerp(scale, tree->texalpha_new, tree->texalpha_old));
     setBumpScale(lerp(scale, tree->bumpiness_new, tree->bumpiness_old));
-    set_specular(lerp(scale, tree->specular_old, tree->specular_old));
+    set_specular(vec4(lerp(scale, tree->specular_old, tree->specular_old)));
     
     enableTex(true);   bindTexture(tree->bark_texture, TEX_UNIT);
     enableBump(true);  bindTexture(tree->bark_normal, BUMP_UNIT);

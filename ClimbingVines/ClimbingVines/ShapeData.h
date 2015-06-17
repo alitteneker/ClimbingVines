@@ -25,7 +25,7 @@
 
 class ShapeData {
 public:
-    ShapeData(int size);
+    ShapeData(unsigned long size);
     ~ShapeData();
     
     void bind( GLuint program );
@@ -38,7 +38,7 @@ public:
     bool subUVs();
     
     GLuint vao = 0;
-    int numVertices = 0;
+    unsigned long numVertices = 0;
     vec4* points   = 0;
     vec3* normals  = 0;
     vec3* tangents = 0;

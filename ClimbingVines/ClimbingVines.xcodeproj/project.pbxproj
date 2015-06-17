@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90948AF1B3121860091D128 /* GLImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90948AD1B3121860091D128 /* GLImage.cpp */; };
+		C90948B21B312A190091D128 /* GLOBJParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90948B01B312A190091D128 /* GLOBJParser.cpp */; };
+		C90948B51B313BD20091D128 /* PrimitiveShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90948B31B313BD20091D128 /* PrimitiveShape.cpp */; };
 		C9DAC0FF1B300DE300E4C2FC /* anim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0961B300DE300E4C2FC /* anim.cpp */; };
 		C9DAC1031B300DE300E4C2FC /* CameraManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC09D1B300DE300E4C2FC /* CameraManager.cpp */; };
 		C9DAC1041B300DE300E4C2FC /* KeyboardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0A01B300DE300E4C2FC /* KeyboardManager.cpp */; };
@@ -14,7 +17,7 @@
 		C9DAC1071B300DE300E4C2FC /* Primitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0A51B300DE300E4C2FC /* Primitives.cpp */; };
 		C9DAC11C1B300DE300E4C2FC /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0EE1B300DE300E4C2FC /* ShaderManager.cpp */; };
 		C9DAC11D1B300DE300E4C2FC /* ShapeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F01B300DE300E4C2FC /* ShapeData.cpp */; };
-		C9DAC11E1B300DE300E4C2FC /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F21B300DE300E4C2FC /* TextureManager.cpp */; };
+		C9DAC11E1B300DE300E4C2FC /* TextureLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F21B300DE300E4C2FC /* TextureLoader.cpp */; };
 		C9DAC11F1B300DE300E4C2FC /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F41B300DE300E4C2FC /* Timer.cpp */; };
 		C9DAC1201B300DE300E4C2FC /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F61B300DE300E4C2FC /* Tree.cpp */; };
 		C9DAC1211B300DE300E4C2FC /* TreeLeaf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F81B300DE300E4C2FC /* TreeLeaf.cpp */; };
@@ -62,6 +65,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C90948AD1B3121860091D128 /* GLImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLImage.cpp; sourceTree = "<group>"; };
+		C90948AE1B3121860091D128 /* GLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLImage.h; sourceTree = "<group>"; };
+		C90948B01B312A190091D128 /* GLOBJParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLOBJParser.cpp; sourceTree = "<group>"; };
+		C90948B11B312A190091D128 /* GLOBJParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLOBJParser.h; sourceTree = "<group>"; };
+		C90948B31B313BD20091D128 /* PrimitiveShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PrimitiveShape.cpp; sourceTree = "<group>"; };
+		C90948B41B313BD20091D128 /* PrimitiveShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimitiveShape.h; sourceTree = "<group>"; };
 		C9DAC08B1B300AD200E4C2FC /* ClimbingVines */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClimbingVines; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DAC0961B300DE300E4C2FC /* anim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = anim.cpp; sourceTree = "<group>"; };
 		C9DAC09D1B300DE300E4C2FC /* CameraManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraManager.cpp; sourceTree = "<group>"; };
@@ -77,8 +86,8 @@
 		C9DAC0EF1B300DE300E4C2FC /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderManager.h; sourceTree = "<group>"; };
 		C9DAC0F01B300DE300E4C2FC /* ShapeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShapeData.cpp; sourceTree = "<group>"; };
 		C9DAC0F11B300DE300E4C2FC /* ShapeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeData.h; sourceTree = "<group>"; };
-		C9DAC0F21B300DE300E4C2FC /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
-		C9DAC0F31B300DE300E4C2FC /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
+		C9DAC0F21B300DE300E4C2FC /* TextureLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureLoader.cpp; sourceTree = "<group>"; };
+		C9DAC0F31B300DE300E4C2FC /* TextureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureLoader.h; sourceTree = "<group>"; };
 		C9DAC0F41B300DE300E4C2FC /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		C9DAC0F51B300DE300E4C2FC /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
 		C9DAC0F61B300DE300E4C2FC /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
@@ -160,6 +169,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C90948AC1B31216A0091D128 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				C9DAC0F21B300DE300E4C2FC /* TextureLoader.cpp */,
+				C9DAC0F31B300DE300E4C2FC /* TextureLoader.h */,
+				C90948AD1B3121860091D128 /* GLImage.cpp */,
+				C90948AE1B3121860091D128 /* GLImage.h */,
+				C90948B01B312A190091D128 /* GLOBJParser.cpp */,
+				C90948B11B312A190091D128 /* GLOBJParser.h */,
+			);
+			name = IO;
+			sourceTree = "<group>";
+		};
 		C9DAC0821B300AD200E4C2FC = {
 			isa = PBXGroup;
 			children = (
@@ -190,12 +212,13 @@
 		C9DAC0951B300DA500E4C2FC /* oGL */ = {
 			isa = PBXGroup;
 			children = (
-				C9DAC12C1B300FE400E4C2FC /* Timer */,
-				C9DAC12B1B300FD100E4C2FC /* Plant */,
-				C9DAC12A1B300F5A00E4C2FC /* Geometry */,
-				C9DAC1291B300EBA00E4C2FC /* Shaders */,
-				C9DAC1281B300E5C00E4C2FC /* Managers */,
+				C90948AC1B31216A0091D128 /* IO */,
 				C9DAC0961B300DE300E4C2FC /* anim.cpp */,
+				C9DAC12A1B300F5A00E4C2FC /* Geometry */,
+				C9DAC1281B300E5C00E4C2FC /* Managers */,
+				C9DAC12B1B300FD100E4C2FC /* Plant */,
+				C9DAC1291B300EBA00E4C2FC /* Shaders */,
+				C9DAC12C1B300FE400E4C2FC /* Timer */,
 			);
 			name = oGL;
 			sourceTree = "<group>";
@@ -203,8 +226,6 @@
 		C9DAC1281B300E5C00E4C2FC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				C9DAC0F21B300DE300E4C2FC /* TextureManager.cpp */,
-				C9DAC0F31B300DE300E4C2FC /* TextureManager.h */,
 				C9DAC0EE1B300DE300E4C2FC /* ShaderManager.cpp */,
 				C9DAC0EF1B300DE300E4C2FC /* ShaderManager.h */,
 				C9DAC0A31B300DE300E4C2FC /* MatrixManager.cpp */,
@@ -235,6 +256,8 @@
 				C9DAC0A61B300DE300E4C2FC /* Primitives.h */,
 				C9DAC0FA1B300DE300E4C2FC /* PlantPrimitives.cpp */,
 				C9DAC0FB1B300DE300E4C2FC /* PlantPrimitives.h */,
+				C90948B31B313BD20091D128 /* PrimitiveShape.cpp */,
+				C90948B41B313BD20091D128 /* PrimitiveShape.h */,
 			);
 			name = Geometry;
 			sourceTree = "<group>";
@@ -459,14 +482,17 @@
 				C9DAC1201B300DE300E4C2FC /* Tree.cpp in Sources */,
 				C9DAC1061B300DE300E4C2FC /* MatrixManager.cpp in Sources */,
 				C9DAC16F1B30147200E4C2FC /* Voxel.cpp in Sources */,
+				C90948B51B313BD20091D128 /* PrimitiveShape.cpp in Sources */,
 				C9DAC1031B300DE300E4C2FC /* CameraManager.cpp in Sources */,
 				C9DAC1671B30147200E4C2FC /* matm.cpp in Sources */,
 				C9DAC1861B301B8200E4C2FC /* Light.cpp in Sources */,
-				C9DAC11E1B300DE300E4C2FC /* TextureManager.cpp in Sources */,
+				C9DAC11E1B300DE300E4C2FC /* TextureLoader.cpp in Sources */,
 				C9DAC1691B30147200E4C2FC /* PCylinder.cpp in Sources */,
 				C9DAC1781B3016D700E4C2FC /* vecm.cpp in Sources */,
+				C90948AF1B3121860091D128 /* GLImage.cpp in Sources */,
 				C9DAC1761B30160700E4C2FC /* Image.cpp in Sources */,
 				C9DAC11D1B300DE300E4C2FC /* ShapeData.cpp in Sources */,
+				C90948B21B312A190091D128 /* GLOBJParser.cpp in Sources */,
 				C9DAC1221B300DE300E4C2FC /* PlantPrimitives.cpp in Sources */,
 				C9DAC15F1B30147200E4C2FC /* Plane.cpp in Sources */,
 				C9DAC16B1B30147200E4C2FC /* PSphere.cpp in Sources */,
@@ -600,6 +626,7 @@
 				C9DAC0941B300AD200E4C2FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3B258DC2-DD6C-4DB1-8FA3-5485F0CAF259</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ClimbingVines</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4CC68F8ABE224351D530C38B448022F8F54B6655</key>
+		<string>https://github.com/alitteneker/RayTracer.git</string>
+		<key>50F3340195986F413D5276EF57B4FA2F8CC2CA98</key>
+		<string>https://github.com/alitteneker/ClimbingVines.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ClimbingVines/ClimbingVines.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4CC68F8ABE224351D530C38B448022F8F54B6655</key>
+		<string>../../../../RayTracer</string>
+		<key>50F3340195986F413D5276EF57B4FA2F8CC2CA98</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alitteneker/ClimbingVines.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>50F3340195986F413D5276EF57B4FA2F8CC2CA98</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>50F3340195986F413D5276EF57B4FA2F8CC2CA98</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS275</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4CC68F8ABE224351D530C38B448022F8F54B6655</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RayTracer</string>
+		</dict>
+	</array>
+</dict>
+</plist>

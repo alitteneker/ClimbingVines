@@ -13,6 +13,8 @@
 
 #include <stdio.h>
 #include "matm.h"
+#include "GLImage.h"
+#include "Material.h"
 
 extern const int TEX_UNIT;
 extern const int BUMP_UNIT;
@@ -21,7 +23,9 @@ extern const int GLOSS_UNIT;
 GLuint InitShader( const char* vertexShaderFile, const char* fragmentShaderFile );
 
 void initShaderVars(GLuint program);
+void bindTexture(GLImage *texture, GLuint unit);
 void bindTexture(GLuint texture, GLuint unit);
+void writeMaterial(Material *m);
 void writeModel();
 void writeModel(mat4 model);
 void writeView();
@@ -40,13 +44,12 @@ void set_light_position(vec4 set);
 void set_light_position(float x, float y, float z);
 void set_camera_position(vec4 set);
 void enableEyeRelative(bool enable);
-void set_ambient(float s);
-void set_diffuse(float s);
-void set_specular(float s);
+void set_ambient(vec4 s);
+void set_diffuse(vec4 s);
+void set_specular(vec4 s);
 void set_shininess(float s);
 void set_colour(float r, float g, float b);
 void set_colour(vec4 set);
-void set_material(float a, float d, float s);
 void writeColour();
 void writeMaterial();
 

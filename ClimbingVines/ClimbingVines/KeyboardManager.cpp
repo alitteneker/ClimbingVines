@@ -8,7 +8,7 @@ KeyboardManager keyManager;
 
 bool KeyboardManager::handleKeys() {
     bool ret = false;
-    float vert = 0, horiz = 0, roll = 0, dist = 0, bump = 1;
+    float vert = 0, horiz = 0, roll = 0, dist = 0;
     if( keyManager.keySpecialStates[GLUT_KEY_UP] )
         vert += 1;
     if( keyManager.keySpecialStates[GLUT_KEY_DOWN] )
