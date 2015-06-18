@@ -32,7 +32,7 @@
 #include "ShapeData.h"
 #include "PrimitiveShape.h"
 #include "PlantVoxelMap.h"
-#include "Tree.h"
+#include "Vine.h"
 #include "GLOBJParser.h"
 
 #include "MatrixManager.h"
@@ -56,7 +56,7 @@ int PrevX  = 0;
 
 Timer TM;
 double TIME = 0.0;
-bool Animate = true;
+bool Animate = false;
 
 int framecount;
 double timecount;
@@ -64,7 +64,7 @@ bool msaa = true;
 bool bumpEn = true;
 bool glossEn = true;
 bool orthEn = false;
-bool voxEn = true;
+bool voxEn = false;
 
 void instructions();
 #define PI 3.1415926535897
@@ -73,7 +73,7 @@ void instructions();
 #define Z 2
 
 // The Tree
-Tree* tree;
+Vine* vine;
 
 // store data for the environment
 PrimitiveShape* building;
@@ -113,16 +113,15 @@ void myinit(void) {
     if( msaa )
         glEnable(GL_MULTISAMPLE_ARB);
     
-    // Create our tree!
-//    tree = new Tree(program);
-    
     // load the house
-    vector<Primitive*> raw = GL_parse_obj_file(/*"WoodenCabinObj.obj");//*/"house_obj.obj");
+    /* "WoodenCabinObj.obj" : scale 0.1  */
+    /* "house_obj.obj"      : scale 0.01 */
+    vector<Primitive*> raw = GL_parse_obj_file("house_obj.obj");
     printf("Loaded %lu primitives.\n", raw.size());
     
     // construct the oGL adaptor for the loaded RT primitives
     building = new PrimitiveShape(raw[0]->material);
-    const float rot = 115, scale = 0.01;
+    const float rot = 120, scale = 0.01;
     mat4 trans = RotateY(rot) * Scale(scale);
     mat4 invtrans = RotateY(-rot) * Scale(1/scale);
     for( int i = 0; i < raw.size(); ++i ) {
@@ -133,8 +132,11 @@ void myinit(void) {
     
     // set up the voxel map
     box_texture = loadTexture("outline_box3.tga");
-    voxelmap = new PlantVoxelMap(.10,.5,raw);
+    voxelmap = new PlantVoxelMap( 0.10, 0.5, raw );
 //    voxelmap->calc_closest();
+    
+    // Create our vine!
+    vine = new Vine(program, vec4(10,0,0,0), voxelmap);
 
     printf("Finished Initialization.\n");
 }
@@ -161,23 +163,17 @@ void display(void) {
     // make sure our matrices are cleared, and ready for real work
     mModel.setIdentity(); mView.setIdentity();
     camera.setVars();
-    
-    // update the time counters
     ++framecount;
-    const float elapsed = TM.GetElapsedTime();
-    timecount += elapsed;
-    TIME += elapsed;
-    TM.Reset();
     
     // Set up all the right flags for general rendering
     enableOrtho(orthEn);
     enableEyeRelative(false);
     enableLighting(true);
 
-//    // Draw the tree!
-//    mstack.push(mModel);
-//    tree->draw();
-//    mModel = mstack.pop();
+    // Draw the vine!
+    mstack.push(mModel);
+    vine->draw();
+    mModel = mstack.pop();
     
     // draw the building
     mstack.push(mModel);
@@ -209,7 +205,7 @@ void display(void) {
     
     // just for debugging, draw a sphere around the light position
     mstack.push(mModel);
-    mModel *= Translate(30, 30, 30);
+    mModel *= Translate(10, 30, 10);
     drawSphere();
     mModel = mstack.pop();
     
@@ -243,7 +239,7 @@ void myReshape(int w, int h) {
     glViewport(0, 0, w, h);
 
     float orthScale = 0.01;
-    mat4 projection = Perspective(50.0f, (float)w/(float)h, 0.1f, 1000.0f);
+    mat4 projection = Perspective(40.0f, (float)w/(float)h, 0.1f, 1000.0f);
     mat4 ortho = Ortho(-orthScale*Width/2.0f, orthScale*Width/2.0f, -orthScale*Height/2.0f, orthScale*Height/2.0f, 1.0f, 1000.0f);
     writeProjection(projection);
     writeOrtho(ortho);
@@ -337,6 +333,8 @@ void keyPressed(unsigned char key) {
 }
 
 void idleCB(void) {
+    const float elapsed = TM.GetElapsedTime();
+    timecount += elapsed;
     if( Animate ) {
         // Do some basic FPS calculations
         if( timecount > 1 ) {
@@ -344,13 +342,15 @@ void idleCB(void) {
             framecount = 0;
             timecount = 0;
         }
-
-//        tree->passTime(TIME);
+        TIME += elapsed;
+        
+        vine->passTime(elapsed);
 
         glutPostRedisplay();
     }
     if( keyManager.handleKeys() )
         glutPostRedisplay();
+    TM.Reset();
 }
 /*********************************************************
      PROC: main()

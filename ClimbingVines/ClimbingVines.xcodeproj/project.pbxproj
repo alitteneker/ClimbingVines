@@ -20,10 +20,10 @@
 		C9DAC11D1B300DE300E4C2FC /* ShapeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F01B300DE300E4C2FC /* ShapeData.cpp */; };
 		C9DAC11E1B300DE300E4C2FC /* TextureLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F21B300DE300E4C2FC /* TextureLoader.cpp */; };
 		C9DAC11F1B300DE300E4C2FC /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F41B300DE300E4C2FC /* Timer.cpp */; };
-		C9DAC1201B300DE300E4C2FC /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F61B300DE300E4C2FC /* Tree.cpp */; };
-		C9DAC1211B300DE300E4C2FC /* TreeLeaf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F81B300DE300E4C2FC /* TreeLeaf.cpp */; };
+		C9DAC1201B300DE300E4C2FC /* Vine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F61B300DE300E4C2FC /* Vine.cpp */; };
+		C9DAC1211B300DE300E4C2FC /* VineLeaf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0F81B300DE300E4C2FC /* VineLeaf.cpp */; };
 		C9DAC1221B300DE300E4C2FC /* PlantPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0FA1B300DE300E4C2FC /* PlantPrimitives.cpp */; };
-		C9DAC1231B300DE300E4C2FC /* TreeSegment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0FC1B300DE300E4C2FC /* TreeSegment.cpp */; };
+		C9DAC1231B300DE300E4C2FC /* VineSegment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0FC1B300DE300E4C2FC /* VineSegment.cpp */; };
 		C9DAC1251B300E3500E4C2FC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DAC1241B300E3500E4C2FC /* OpenGL.framework */; };
 		C9DAC1271B300E4B00E4C2FC /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DAC1261B300E4B00E4C2FC /* GLUT.framework */; };
 		C9DAC15D1B30147200E4C2FC /* AABB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC12E1B30147200E4C2FC /* AABB.cpp */; };
@@ -93,14 +93,14 @@
 		C9DAC0F31B300DE300E4C2FC /* TextureLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureLoader.h; sourceTree = "<group>"; };
 		C9DAC0F41B300DE300E4C2FC /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		C9DAC0F51B300DE300E4C2FC /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
-		C9DAC0F61B300DE300E4C2FC /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
-		C9DAC0F71B300DE300E4C2FC /* Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
-		C9DAC0F81B300DE300E4C2FC /* TreeLeaf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeLeaf.cpp; sourceTree = "<group>"; };
-		C9DAC0F91B300DE300E4C2FC /* TreeLeaf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeLeaf.h; sourceTree = "<group>"; };
+		C9DAC0F61B300DE300E4C2FC /* Vine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vine.cpp; sourceTree = "<group>"; };
+		C9DAC0F71B300DE300E4C2FC /* Vine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vine.h; sourceTree = "<group>"; };
+		C9DAC0F81B300DE300E4C2FC /* VineLeaf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VineLeaf.cpp; sourceTree = "<group>"; };
+		C9DAC0F91B300DE300E4C2FC /* VineLeaf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VineLeaf.h; sourceTree = "<group>"; };
 		C9DAC0FA1B300DE300E4C2FC /* PlantPrimitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlantPrimitives.cpp; sourceTree = "<group>"; };
 		C9DAC0FB1B300DE300E4C2FC /* PlantPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantPrimitives.h; sourceTree = "<group>"; };
-		C9DAC0FC1B300DE300E4C2FC /* TreeSegment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeSegment.cpp; sourceTree = "<group>"; };
-		C9DAC0FD1B300DE300E4C2FC /* TreeSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeSegment.h; sourceTree = "<group>"; };
+		C9DAC0FC1B300DE300E4C2FC /* VineSegment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VineSegment.cpp; sourceTree = "<group>"; };
+		C9DAC0FD1B300DE300E4C2FC /* VineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VineSegment.h; sourceTree = "<group>"; };
 		C9DAC0FE1B300DE300E4C2FC /* vshader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vshader.glsl; sourceTree = "<group>"; };
 		C9DAC1241B300E3500E4C2FC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		C9DAC1261B300E4B00E4C2FC /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -278,12 +278,12 @@
 		C9DAC12B1B300FD100E4C2FC /* Plant */ = {
 			isa = PBXGroup;
 			children = (
-				C9DAC0F61B300DE300E4C2FC /* Tree.cpp */,
-				C9DAC0F71B300DE300E4C2FC /* Tree.h */,
-				C9DAC0F81B300DE300E4C2FC /* TreeLeaf.cpp */,
-				C9DAC0F91B300DE300E4C2FC /* TreeLeaf.h */,
-				C9DAC0FC1B300DE300E4C2FC /* TreeSegment.cpp */,
-				C9DAC0FD1B300DE300E4C2FC /* TreeSegment.h */,
+				C9DAC0F61B300DE300E4C2FC /* Vine.cpp */,
+				C9DAC0F71B300DE300E4C2FC /* Vine.h */,
+				C9DAC0F81B300DE300E4C2FC /* VineLeaf.cpp */,
+				C9DAC0F91B300DE300E4C2FC /* VineLeaf.h */,
+				C9DAC0FC1B300DE300E4C2FC /* VineSegment.cpp */,
+				C9DAC0FD1B300DE300E4C2FC /* VineSegment.h */,
 			);
 			name = Plant;
 			sourceTree = "<group>";
@@ -492,7 +492,7 @@
 				C9DAC1811B301B6000E4C2FC /* Camera.cpp in Sources */,
 				C9DAC1631B30147200E4C2FC /* Triangle.cpp in Sources */,
 				C9DAC1041B300DE300E4C2FC /* KeyboardManager.cpp in Sources */,
-				C9DAC1201B300DE300E4C2FC /* Tree.cpp in Sources */,
+				C9DAC1201B300DE300E4C2FC /* Vine.cpp in Sources */,
 				C9DAC1061B300DE300E4C2FC /* MatrixManager.cpp in Sources */,
 				C9DAC16F1B30147200E4C2FC /* Voxel.cpp in Sources */,
 				C90948B51B313BD20091D128 /* PrimitiveShape.cpp in Sources */,
@@ -521,9 +521,9 @@
 				C90948B91B3236F60091D128 /* PlantVoxelMap.cpp in Sources */,
 				C9DAC1641B30147200E4C2FC /* ImageIO.cpp in Sources */,
 				C9DAC16C1B30147200E4C2FC /* PTriangle.cpp in Sources */,
-				C9DAC1231B300DE300E4C2FC /* TreeSegment.cpp in Sources */,
+				C9DAC1231B300DE300E4C2FC /* VineSegment.cpp in Sources */,
 				C9DAC16D1B30147200E4C2FC /* World.cpp in Sources */,
-				C9DAC1211B300DE300E4C2FC /* TreeLeaf.cpp in Sources */,
+				C9DAC1211B300DE300E4C2FC /* VineLeaf.cpp in Sources */,
 				C9DAC1601B30147200E4C2FC /* Ray.cpp in Sources */,
 				C9DAC1821B301B6000E4C2FC /* Phong.cpp in Sources */,
 				C9DAC1611B30147200E4C2FC /* Shape.cpp in Sources */,

@@ -46,7 +46,7 @@ void initShaderVars(GLuint program) {
     
     writeMaterial();
     enableLighting(true);
-    set_light_position(30.0f, 30.0f, 30.0f);
+    set_light_position(10.0f, 30.0f, 10.0f);
     setMinDiffuse(0.05f);
     setTextureAlpha(1.0f);
     setBumpScale(5.0);
