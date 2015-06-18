@@ -20,5 +20,5 @@ void GLImage::resize_image(int width, int height, unsigned char bytecount) {
     this->width = width;
     this->height = height;
     this->bytecount = bytecount;
-//    data = new unsigned char[ width * height * bytecount ];
+    data = new unsigned char[ width * height * bytecount ];
 }

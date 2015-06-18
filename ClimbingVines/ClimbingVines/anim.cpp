@@ -31,6 +31,7 @@
 #include "PlantPrimitives.h"
 #include "ShapeData.h"
 #include "PrimitiveShape.h"
+#include "PlantVoxelMap.h"
 #include "Tree.h"
 #include "GLOBJParser.h"
 
@@ -63,6 +64,7 @@ bool msaa = true;
 bool bumpEn = true;
 bool glossEn = true;
 bool orthEn = false;
+bool voxEn = true;
 
 void instructions();
 #define PI 3.1415926535897
@@ -75,9 +77,11 @@ Tree* tree;
 
 // store data for the environment
 PrimitiveShape* building;
+PlantVoxelMap* voxelmap;
 
 // Sky box (sphere) texture
 GLImage* sky_texture;
+GLImage* box_texture;
 GLImage *ground_texture, *ground_gloss, *ground_normal;
 ShapeData* ground_box;
 
@@ -100,7 +104,7 @@ void myinit(void) {
     ground_texture = loadTexture("ground_texture.tga");
     ground_normal = loadTexture("ground_normal.tga");
     ground_gloss = loadTexture("ground_grey.tga");
-    ground_box = genCube(program, 50);
+    ground_box = genCube(program, 150);
 
     // Enable depth testing
     glEnable(GL_DEPTH_TEST);
@@ -113,12 +117,26 @@ void myinit(void) {
 //    tree = new Tree(program);
     
     // load the house
-    vector<Primitive*> raw = GL_parse_obj_file("WoodenCabinObj.obj");//"house_obj.obj");
+    vector<Primitive*> raw = GL_parse_obj_file(/*"WoodenCabinObj.obj");//*/"house_obj.obj");
     printf("Loaded %lu primitives.\n", raw.size());
+    
+    // construct the oGL adaptor for the loaded RT primitives
     building = new PrimitiveShape(raw[0]->material);
-    for( int i = 0; i < raw.size(); ++i )
+    const float rot = 115, scale = 0.01;
+    mat4 trans = RotateY(rot) * Scale(scale);
+    mat4 invtrans = RotateY(-rot) * Scale(1/scale);
+    for( int i = 0; i < raw.size(); ++i ) {
+        raw[i]->transform(trans, invtrans);
         building->addPrimitive(raw[i]);
+    }
     building->buildShape(program);
+    
+    // set up the voxel map
+    box_texture = loadTexture("outline_box3.tga");
+    voxelmap = new PlantVoxelMap(.10,.5,raw);
+//    voxelmap->calc_closest();
+
+    printf("Finished Initialization.\n");
 }
 
 
@@ -146,7 +164,9 @@ void display(void) {
     
     // update the time counters
     ++framecount;
-    timecount += TM.GetElapsedTime();
+    const float elapsed = TM.GetElapsedTime();
+    timecount += elapsed;
+    TIME += elapsed;
     TM.Reset();
     
     // Set up all the right flags for general rendering
@@ -161,11 +181,18 @@ void display(void) {
     
     // draw the building
     mstack.push(mModel);
-    mModel *= Scale(0.2f);
-    building->draw();
+    if( voxEn ) {
+        bindTexture(box_texture, TEX_UNIT);
+        voxelmap->draw();
+    }
+    else {
+        setBumpScale(3.0);
+        building->draw();
+    }
     mModel = mstack.pop();
     
     // draw a ground plane
+    mstack.push(mModel);
     enableTex(true);
     enableBump(true);
     enableGloss(true);
@@ -173,11 +200,17 @@ void display(void) {
     bindTexture(ground_normal, BUMP_UNIT);
     bindTexture(ground_gloss, GLOSS_UNIT);
     set_colour(1,1,1);
+    set_diffuse(0.5f);
     setTextureAlpha(1.0);
     setBumpScale(5.0);
-    mstack.push(mModel);
     mModel *= Translate(0, -0.5, 0) * Scale(1000,1,1000);
     ground_box->draw();
+    mModel = mstack.pop();
+    
+    // just for debugging, draw a sphere around the light position
+    mstack.push(mModel);
+    mModel *= Translate(30, 30, 30);
+    drawSphere();
     mModel = mstack.pop();
     
     // Draw the sky sphere (note the lighting disable, and the eye-relative positioning)
@@ -191,12 +224,6 @@ void display(void) {
     mModel *= Scale(500) * RotateY(180);
     drawSphere();
     mModel = mstack.pop();
-    
-    // just for debugging, draw a sphere around the light position
-//    mstack.push(mModel);
-//    mModel *= Translate(30, 30, 30);
-//    drawSphere();
-//    mModel = mstack.pop();
 
     // just to be safe, empty out the matrix stack, and swap buffers
     mstack.empty();
@@ -287,6 +314,10 @@ void keyPressed(unsigned char key) {
         case '0':
             //reset your object
             break ;
+        case 'v':
+            voxEn = !voxEn;
+            glutPostRedisplay();
+            break;
         case 'h':
             bumpEn = !bumpEn;
             glutPostRedisplay();

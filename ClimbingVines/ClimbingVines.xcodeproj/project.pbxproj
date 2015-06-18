@@ -10,6 +10,7 @@
 		C90948AF1B3121860091D128 /* GLImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90948AD1B3121860091D128 /* GLImage.cpp */; };
 		C90948B21B312A190091D128 /* GLOBJParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90948B01B312A190091D128 /* GLOBJParser.cpp */; };
 		C90948B51B313BD20091D128 /* PrimitiveShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90948B31B313BD20091D128 /* PrimitiveShape.cpp */; };
+		C90948B91B3236F60091D128 /* PlantVoxelMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C90948B71B3236F60091D128 /* PlantVoxelMap.cpp */; };
 		C9DAC0FF1B300DE300E4C2FC /* anim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0961B300DE300E4C2FC /* anim.cpp */; };
 		C9DAC1031B300DE300E4C2FC /* CameraManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC09D1B300DE300E4C2FC /* CameraManager.cpp */; };
 		C9DAC1041B300DE300E4C2FC /* KeyboardManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C9DAC0A01B300DE300E4C2FC /* KeyboardManager.cpp */; };
@@ -71,6 +72,8 @@
 		C90948B11B312A190091D128 /* GLOBJParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLOBJParser.h; sourceTree = "<group>"; };
 		C90948B31B313BD20091D128 /* PrimitiveShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PrimitiveShape.cpp; sourceTree = "<group>"; };
 		C90948B41B313BD20091D128 /* PrimitiveShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimitiveShape.h; sourceTree = "<group>"; };
+		C90948B71B3236F60091D128 /* PlantVoxelMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlantVoxelMap.cpp; sourceTree = "<group>"; };
+		C90948B81B3236F60091D128 /* PlantVoxelMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlantVoxelMap.h; sourceTree = "<group>"; };
 		C9DAC08B1B300AD200E4C2FC /* ClimbingVines */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ClimbingVines; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9DAC0961B300DE300E4C2FC /* anim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = anim.cpp; sourceTree = "<group>"; };
 		C9DAC09D1B300DE300E4C2FC /* CameraManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CameraManager.cpp; sourceTree = "<group>"; };
@@ -174,12 +177,23 @@
 			children = (
 				C9DAC0F21B300DE300E4C2FC /* TextureLoader.cpp */,
 				C9DAC0F31B300DE300E4C2FC /* TextureLoader.h */,
-				C90948AD1B3121860091D128 /* GLImage.cpp */,
-				C90948AE1B3121860091D128 /* GLImage.h */,
 				C90948B01B312A190091D128 /* GLOBJParser.cpp */,
 				C90948B11B312A190091D128 /* GLOBJParser.h */,
 			);
 			name = IO;
+			sourceTree = "<group>";
+		};
+		C90948B61B3236B90091D128 /* RT Adaptors */ = {
+			isa = PBXGroup;
+			children = (
+				C90948AD1B3121860091D128 /* GLImage.cpp */,
+				C90948AE1B3121860091D128 /* GLImage.h */,
+				C90948B31B313BD20091D128 /* PrimitiveShape.cpp */,
+				C90948B41B313BD20091D128 /* PrimitiveShape.h */,
+				C90948B71B3236F60091D128 /* PlantVoxelMap.cpp */,
+				C90948B81B3236F60091D128 /* PlantVoxelMap.h */,
+			);
+			name = "RT Adaptors";
 			sourceTree = "<group>";
 		};
 		C9DAC0821B300AD200E4C2FC = {
@@ -212,9 +226,10 @@
 		C9DAC0951B300DA500E4C2FC /* oGL */ = {
 			isa = PBXGroup;
 			children = (
-				C90948AC1B31216A0091D128 /* IO */,
 				C9DAC0961B300DE300E4C2FC /* anim.cpp */,
+				C90948B61B3236B90091D128 /* RT Adaptors */,
 				C9DAC12A1B300F5A00E4C2FC /* Geometry */,
+				C90948AC1B31216A0091D128 /* IO */,
 				C9DAC1281B300E5C00E4C2FC /* Managers */,
 				C9DAC12B1B300FD100E4C2FC /* Plant */,
 				C9DAC1291B300EBA00E4C2FC /* Shaders */,
@@ -256,8 +271,6 @@
 				C9DAC0A61B300DE300E4C2FC /* Primitives.h */,
 				C9DAC0FA1B300DE300E4C2FC /* PlantPrimitives.cpp */,
 				C9DAC0FB1B300DE300E4C2FC /* PlantPrimitives.h */,
-				C90948B31B313BD20091D128 /* PrimitiveShape.cpp */,
-				C90948B41B313BD20091D128 /* PrimitiveShape.h */,
 			);
 			name = Geometry;
 			sourceTree = "<group>";
@@ -505,6 +518,7 @@
 				C9DAC0FF1B300DE300E4C2FC /* anim.cpp in Sources */,
 				C9DAC1621B30147200E4C2FC /* Sphere.cpp in Sources */,
 				C9DAC1701B30147200E4C2FC /* VoxelMap.cpp in Sources */,
+				C90948B91B3236F60091D128 /* PlantVoxelMap.cpp in Sources */,
 				C9DAC1641B30147200E4C2FC /* ImageIO.cpp in Sources */,
 				C9DAC16C1B30147200E4C2FC /* PTriangle.cpp in Sources */,
 				C9DAC1231B300DE300E4C2FC /* TreeSegment.cpp in Sources */,

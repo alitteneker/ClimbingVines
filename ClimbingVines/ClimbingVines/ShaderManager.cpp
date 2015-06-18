@@ -64,6 +64,7 @@ void writeMaterial(Material *m) {
     if( m->map_Kd != NULL ) {
         enableTex(true);
         bindTexture((GLImage*)m->map_Kd, TEX_UNIT);
+        set_diffuse(1.0f);
     }
     else {
         set_diffuse(m->k_diffuse);

@@ -3,12 +3,37 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "VoxelMap::add(Shape*):VoxelMap.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "get_voxel(max_ind.x, max_ind.y, max_ind.z)">
+            </PersistentString>
+            <PersistentString
+               value = "max_ind">
+            </PersistentString>
+            <PersistentString
+               value = "min_ind">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "GLloadTGA(std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;):TextureLoader.cpp">
          <PersistentStrings>
             <PersistentString
                value = "info[4]/8">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Triangle::collides_with(AABB const*):Triangle.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "get_AABB()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "VoxelMap::VoxelMap(float, float, std::__1::vector&lt;Primitive*, std::__1::allocator&lt;Primitive*&gt; &gt;&amp;):VoxelMap.cpp">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -72,8 +72,7 @@ GLImage* GLloadTGA(const string filename) {
         return NULL;
     }
     
-    GLImage *ret = new GLImage();
-    ret->resize_image( info[0] + info[1] * 256, info[2] + info[3] * 256, info[4] / 8 );
+    GLImage *ret = new GLImage(info[0] + info[1] * 256, info[2] + info[3] * 256, info[4] / 8);
     
     if( ret->bytecount != 1 && ret->bytecount != 3 && ret->bytecount != 4 ) {
         printf("Error: Invalid image bytecount %d\n", ret->bytecount);
@@ -81,12 +80,8 @@ GLImage* GLloadTGA(const string filename) {
         return NULL;
     }
     
-    //allocate memory for image data
-    long imageSize = ret->width * ret->height * ret->bytecount;
-    ret->data = new unsigned char[imageSize];
-    
     //read in image data
-    fread(ret->data, sizeof(unsigned char), imageSize, file);
+    fread(ret->data, sizeof(unsigned char), ret->width * ret->height * ret->bytecount, file);
     
     //close file
     fclose(file);

@@ -116,11 +116,11 @@ vector<Primitive*> GL_parse_obj_file(string filename) {
             textures.push_back(add);
         }
         else if( vs[0] == "vn" ) {
-            // normal: v x y z [w def 0]
+            // normal: vn x y z [w def 0]
             vec4 add(stof(vs[1]), stof(vs[2]), stof(vs[3]), 0);
             if( vs.size() > 4 && vs[4] != "" )
                 add.w = stof(vs[4]);
-            normals.push_back(normalize(add));
+            normals.push_back(-normalize(add));
         }
         else if( vs[0] == "f" ) {
             // face (treat more than 3 vertices as triangle fan for simplicity)

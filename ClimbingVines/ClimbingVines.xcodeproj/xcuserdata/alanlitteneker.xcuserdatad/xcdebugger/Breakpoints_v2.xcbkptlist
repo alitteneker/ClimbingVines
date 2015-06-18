@@ -9,14 +9,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ClimbingVines/TextureLoader.cpp"
-            timestampString = "456224431.621201"
+            filePath = "../../RayTracer/RayTracer/Math/vecm.h"
+            timestampString = "456296821.688054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "GLloadTGA(const string filename)"
-            landmarkType = "7">
+            startingLineNumber = "404"
+            endingLineNumber = "404">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
