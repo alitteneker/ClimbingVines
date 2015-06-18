@@ -8,4 +8,5 @@ This repo has two main directories:
 
 In order to build this project, you will, however, need some files from the repo at:
 https://github.com/alitteneker/RayTracer
+
 Including all the files from this repo (except RayTrace.cpp) in the build path (eg. -I) will allow the code to compile successfully with g++.
